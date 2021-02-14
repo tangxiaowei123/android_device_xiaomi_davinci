@@ -55,18 +55,12 @@ constexpr const char *DEVICES[] = {
     "Redmi K20",
 };
 
-constexpr const char *BUILD_DESCRIPTION[] = {
-    "davinci-user 10 QKQ1.190825.002 V12.0.3.0.QFJCNXM release-keys",
-    "davinci-user 10 QKQ1.190825.002 V12.0.2.0.QFJMIXM release-keys",
-    "davinciin-user 10 QKQ1.190825.002 V12.0.0.2.QFJINXM release-keys",
-};
-
 constexpr const char *BUILD_FINGERPRINT[] = {
-    "Xiaomi/davinci/davinci:10/QKQ1.190825.002/V12.0.3.0.QFJCNXM:user/"
+    "google/sunfish/sunfish:11/RQ1A.210205.004/7038034:user/"
     "release-keys",
-    "Xiaomi/davinci/davinci:10/QKQ1.190825.002/V12.0.2.0.QFJMIXM:user/"
+    "google/sunfish/sunfish:11/RQ1A.210205.004/7038034:user/"
     "release-keys",
-    "Xiaomi/davinciin/davinciin:10/QKQ1.190825.002/V12.0.0.2.QFJINXM:user/"
+    "google/sunfish/sunfish:11/RQ1A.210205.004/7038034:user/"
     "release-keys",
 };
 
@@ -119,12 +113,7 @@ void load_props(const char *model, bool is_9t = false, bool is_in = false) {
     }
   }
   if (!is_in) {
-    ro_prop_override(nullptr, "description",
-                     is_9t ? BUILD_DESCRIPTION[1] : BUILD_DESCRIPTION[0],
-                     false);
     property_override("ro.boot.product.hardware.sku", PRODUCTS[0]);
-  } else {
-    ro_prop_override(nullptr, "description", BUILD_DESCRIPTION[2], false);
   }
   ro_prop_override(nullptr, "product", model, false);
 
