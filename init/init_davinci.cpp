@@ -64,11 +64,6 @@ constexpr const char *BUILD_FINGERPRINT[] = {
     "release-keys",
 };
 
-constexpr const char *CLIENT_ID[] = {
-    "android-xiaomi",
-    "android-xiaomi-rev1",
-};
-
 void property_override(char const prop[], char const value[], bool add = true) {
   prop_info *pi;
 
@@ -116,14 +111,6 @@ void load_props(const char *model, bool is_9t = false, bool is_in = false) {
     property_override("ro.boot.product.hardware.sku", PRODUCTS[0]);
   }
   ro_prop_override(nullptr, "product", model, false);
-
-  if (is_9t) {
-    ro_prop_override(nullptr, "com.google.clientidbase", CLIENT_ID[0], false);
-  } else if (is_in) {
-    ro_prop_override(nullptr, "com.google.clientidbase", CLIENT_ID[0], false);
-    ro_prop_override(nullptr, "com.google.clientidbase.ms", CLIENT_ID[1],
-                     false);
-  }
 }
 
 void vendor_load_properties() {
