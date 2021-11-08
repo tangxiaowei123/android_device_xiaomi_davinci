@@ -1,4 +1,5 @@
 app_domain(xiaomiparts_app)
+typeattribute xiaomiparts_app mlstrustedsubject;
 
 hal_client_domain(xiaomiparts_app, hal_motor)
 
