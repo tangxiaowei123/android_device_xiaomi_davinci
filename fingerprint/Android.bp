@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_raphael",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_davinci",
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_raphael.rc"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_davinci.rc"],
     srcs: ["service.cpp", "BiometricsFingerprint.cpp"],
     shared_libs: [
         "libbase",
@@ -37,7 +37,7 @@ cc_binary {
 }
 
 cc_library_static {
-    name: "libudfps_extension.xiaomi_raphael",
+    name: "libudfps_extension.xiaomi_davinci",
     srcs: ["UdfpsExtension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"

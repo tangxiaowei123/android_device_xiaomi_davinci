@@ -1,35 +1,30 @@
-The Redmi K20 Pro / Mi 9T Pro (codenamed _"raphael"_) is a flagship smartphone from Xiaomi announced in June 2019.
+Copyright (C) 2019-2020 - The LineageOS Project
 
+The Xiaomi Mi 9T/Redmi K20 (codenamed _"davinci/davinciin"_) are mid range smartphones from Xiaomi.
+
+Both were announced and released in June 2019.
 
 ## Device specifications
 
-| Device                  | Redmi K20 Pro / Mi 9T Pro                                       |
-| ----------------------: | :-------------------------------------------------------------- |
-| SoC                     | Qualcomm SM8150 Snapdragon 855                                  |
-| CPU                     | 1x2.84 GHz Kryo 485 & 3x2.42 GHz Kryo 485 & 4x1.78 GHz Kryo 485 |
-| GPU                     | Adreno 640                                                      |
-| Memory                  | 6GB / 8GB                                                       |
-| Shipped Android version | Android 9, MIUI 10                                              |
-| Storage                 | 64GB / 128GB / 256GB                                            |
-| Battery                 | Li-Po 4000 mAh, non-removable                                   |
-| Dimensions              | 156.7 x 74.3 x 8.8 mm                                           |
-| Display                 | 1080 x 2340 pixels, 6.39 inches                                 |
-| Rear camera 1           | 48 MP, Dual-LED flash, HDR, panorama                            |
-| Rear camera 2           | 8 MP                                                            |
-| Rear camera 3           | 13 MP                                                           |
-| Front camera            | Motorized pop-up 20 MP, HDR                                     |
-
+| Device       | Xiaomi Mi 9T/Redmi K20                          |
+| -----------: | :---------------------------------------------- |
+| SoC          | Qualcomm SM7150-AA Snapdragon 730               |
+| CPU          | 2x2.2 GHz Kryo 470 & 6x1.8 GHz Kryo 470         |
+| GPU          | Adreno 618                                      |
+| Memory       | 6GB RAM (LPDDR4X)                               |
+| Shipped Android version | 9.0 with MIUI 10                     |
+| Storage      | 128GB UFS 2.1 flash storage                     |
+| Battery      | Non-removable Li-Po 4000 mAh                    |
+| Dimensions   | 156.7 x 74.3 x 8.8 mm                           |
+| Display      | 2340 x 1080 (19.5:9), 6.3  inch                 |
+| Rear camera 1 | 48 MP, f/1.8, Dual-LED flash, HDR, panorama    |
+| Rear camera 2 | 8 MP, f/2.4                                    |
+| Rear camera 3 | 13 MP, f/2.4                                   |
+| Front camera | 20MP, f/2.2 Motorized pop-up, 1080p@30fps       |
 
 ## Device picture
 
-![Redmi K20 Pro / Mi 9T Pro](https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/beee478168e5c4fd0d66369386fddbbe.jpg)
+![Xiaomi Mi 9T/Redmi K20](https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-k20/blue-slider-1_03.png "Xiaomi Redmi K20 in blue")
 
-
-## Copyright
-
-```
-#
-# Copyright (C) 2021 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
+#### Proprietary-files.txt
+All unpinned blobs are extracted from [- also patched qti-telephony-common.jar](https://bigota.d.miui.com/V12.1.4.0.RFJMIXM/miui_DAVINCIGlobal_V12.1.4.0.RFJMIXM_e0ac13ed89_11.0.zip).

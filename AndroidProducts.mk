@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_raphael.mk
+    $(LOCAL_DIR)/aosp_davinci.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_raphael-userdebug \
-    arrow_raphael-eng
+    aosp_davinci-userdebug \
+    aosp_davinci-eng

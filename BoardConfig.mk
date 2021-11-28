@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/raphael
+DEVICE_PATH := device/xiaomi/davinci
 
 # Architecture
 TARGET_ARCH := arm64
@@ -22,29 +22,33 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := raphael,raphaelin
+TARGET_OTA_ASSERT_DEVICE := davinci,davinciin
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := msmnile
+TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 service_locator.enable=1 swiotlb=1 earlycon=msm_geni_serial,0x880000 loop.max_part=7
+BOARD_KERNEL_CMDLINE +=  androidboot.vbmeta.avb_version=1.0
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+BOARD_KERNEL_CMDLINE += androidboot.hardware.revision=V1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/raphael
-TARGET_KERNEL_CONFIG := raphael_user_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
+TARGET_KERNEL_CONFIG := davinci_defconfig
 
 # Platform
-TARGET_BOARD_PLATFORM := msmnile
+TARGET_BOARD_PLATFORM := sm6150
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -87,7 +91,7 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_raphael
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_davinci
 TARGET_USES_FOD_ZPOS := true
 
 # FM
@@ -96,12 +100,12 @@ BOARD_HAVE_QCOM_FM := true
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-ODM_MANIFEST_SKUS += raphael
-ODM_MANIFEST_RAPHAEL_FILES := $(DEVICE_PATH)/manifest_nfc.xml
+ODM_MANIFEST_SKUS += davinci
+ODM_MANIFEST_DAVINCI_FILES := $(DEVICE_PATH)/manifest_nfc.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_raphael
-TARGET_RECOVERY_DEVICE_MODULES := libinit_raphael
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_davinci
+TARGET_RECOVERY_DEVICE_MODULES := libinit_davinci
 
 # Media
 TARGET_DISABLED_UBWC := true
@@ -184,4 +188,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/xiaomi/raphael/BoardConfigVendor.mk
+include vendor/xiaomi/davinci/BoardConfigVendor.mk

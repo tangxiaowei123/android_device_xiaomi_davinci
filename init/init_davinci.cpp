@@ -79,13 +79,13 @@ void vendor_load_properties() {
 
     if (region == "INDIA") {
         set_device_props(
-            "Xiaomi", "raphaelin", "Redmi K20 Pro");
+            "Xiaomi", "davinciin", "Redmi K20");
     } else if (region == "CN") {
         set_device_props(
-            "Xiaomi", "raphael", "Redmi K20 Pro");
+            "Xiaomi", "davinci", "Redmi K20");
     } else {
         set_device_props(
-            "Xiaomi", "raphael", "Mi 9T Pro");
+            "Xiaomi", "davinci", "Mi 9T");
     }
     load_dalvik_properties();
     property_override("ro.boot.verifiedbootstate", "green");

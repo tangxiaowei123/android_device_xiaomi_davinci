@@ -43,12 +43,12 @@ on init
     chmod 0660 /dev/akm09970
 
 on init && property:ro.boot.hwc=GLOBAL
-    setprop ro.boot.product.hardware.sku raphael
+    setprop ro.boot.product.hardware.sku davinci
 
 on init && property:ro.boot.hwc=CN
-    setprop ro.boot.product.hardware.sku raphael
+    setprop ro.boot.product.hardware.sku davinci
 
-on property:ro.boot.product.hardware.sku=raphael
+on property:ro.boot.product.hardware.sku=davinci
     enable vendor.nfc_hal_service
 
 on post-fs-data

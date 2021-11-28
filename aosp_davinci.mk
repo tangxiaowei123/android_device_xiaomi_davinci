@@ -9,15 +9,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit from raphael device
-$(call inherit-product, device/xiaomi/raphael/device.mk)
+# Inherit from davinci device
+$(call inherit-product, device/xiaomi/davinci/device.mk)
 
 # Inherit some common Arrow stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_raphael
-PRODUCT_DEVICE := raphael
+PRODUCT_NAME := aosp_davinci
+PRODUCT_DEVICE := davinci
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K20 Pro
 PRODUCT_MANUFACTURER := Xiaomi

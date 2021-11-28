@@ -119,7 +119,7 @@ media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Netflix
-ro.netflix.bsp_rev=Q855-16947-1
+ro.netflix.bsp_rev=Q6150-17263-1
 
 # Netmgr
 persist.data.df.dev_name=rmnet_usb0
@@ -166,7 +166,7 @@ telephony.lteOnCdmaDevice=1
 
 # SoC
 ro.soc.manufacturer=Qualcomm
-ro.soc.model=SM8150
+ro.soc.model=SM6150
 
 # Time
 persist.timed.enable=true
