@@ -153,13 +153,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.xiaomi.hardware.motor@1.0.vendor
 
-ifeq ($(ARROW_GAPPS), true)
 PRODUCT_PACKAGES += \
     GCamGOPrebuilt
-else
-PRODUCT_PACKAGES += \
-    Snap
-endif
 
 # Component overrides
 PRODUCT_COPY_FILES += \
