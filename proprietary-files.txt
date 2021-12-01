@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from V12.5.2.0.RFKMIXM.
+# All unpinned blobs are extracted from V12.1.4.0.RFJMIXM.
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -442,7 +442,8 @@ vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Display Calibration - from davinci V12.5.5.0.RFKCNXM (Patched)
-vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|466f515f4dce2e4138f894946024937f1e953a8f
+vendor/etc/qdcm_calib_data_ss_ea_fhd_cmd_dsi_panel.xml|466f515f4dce2e4138f894946024937f1e953a8f
+vendor/etc/qdcm_calib_data_ss_eb_fhd_cmd_dsi_panel.xml
 
 # Display Postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
