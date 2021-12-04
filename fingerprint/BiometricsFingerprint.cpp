@@ -30,15 +30,16 @@
 #include <fstream>
 #include <thread>
 
+#define FINGERPRINT_ACQUIRED_VENDOR 6
+
 #define COMMAND_NIT 10
-#define PARAM_NIT_FOD 1
+#define PARAM_NIT_630_FOD 1
 #define PARAM_NIT_NONE 0
 
-#define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
-#define FOD_STATUS_ON 1
-#define FOD_STATUS_OFF 0
+#define Touch_Fod_Enable 10
+#define Touch_Aod_Enable 11
 
-#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui"
+#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui"
 
 namespace {
 
@@ -110,7 +111,8 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
                 continue;
             }
 
-            mDevice->extCmd(mDevice, COMMAND_NIT, readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+            xiaomiFingerprintService = IXiaomiFingerprint::getService();
+            xiaomiFingerprintService->extCmd(COMMAND_NIT, readBool(fd) ? PARAM_NIT_630_FOD : PARAM_NIT_NONE);
         }
     }).detach();
 }
@@ -464,12 +466,12 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */,
                                                 float /* minor */, float /* major */) {
-    set(FOD_STATUS_PATH, FOD_STATUS_ON);
+    TouchFeatureService = ITouchFeature::getService();
+    TouchFeatureService->resetTouchMode(Touch_Fod_Enable);
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    set(FOD_STATUS_PATH, FOD_STATUS_OFF);
     return Void();
 }
 
